@@ -17,10 +17,18 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 
-def my_view(request):
-    return HttpResponse("This page is intended for educational purposes, it will not be here forever. =)")
+def home(request):
+    return HttpResponse("HOME")
+
+def contact(request):
+    return HttpResponse("CONTACT")
+
+def about(request):
+    return HttpResponse("ABOUT")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('also-not-permanent', my_view),
+    path('', home), # Home
+    path('about/', about), # /about
+    path('contact/', contact), # /contact
 ]
