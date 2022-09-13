@@ -18,9 +18,9 @@ from django.urls import path
 from django.http import HttpResponse
 
 def my_view(request):
-    return HttpResponse("Now that's a pretty looking string huh?")
+    return HttpResponse("This page is intended for educational purposes, it will not be here forever. =)")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('string/', my_view),
+    path('also-not-permanent', my_view),
 ]
